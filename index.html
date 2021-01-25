@@ -39,10 +39,31 @@
                 console.log(`salud + 10: ${this.salud}`);
             }
         }
+
+        // sub clase
+        class Sensei extends Ninja {
+            // definir parámetros
+            constructor(nombre, salud = 200, velocidad = 10, fuerza = 10, sabiduria = 10) {
+                // primero llamamos al constructor de la clase padre
+                super(nombre, salud, velocidad, fuerza)
+                    // despues fijamos atributos específicos para subclase
+                this.sabiduria = sabiduria;
+            }
+
+            // metodos específicos para sub clase
+            speakWisdom() {
+                console.log('El miedo es el camino hacia el Lado Oscuro. El miedo lleva a la ira, la ira lleva al odio, el odio lleva al sufrimiento.');
+                // llamada a metodo de clase padre
+                super.drinkSake();
+            }
+        }
+
         // crear nuevas instancias o nuevas entradas
         const susa = new Ninja("Susanowa", 100, 25, 10);
         const miya = new Ninja("Miyamoto Musashi", 80);
         const hanzo = new Ninja("Hattori Hanzo", 150, 30, 50);
+
+        const yoda = new Sensei("Maestro Yoda");
     </script>
 </body>
 
