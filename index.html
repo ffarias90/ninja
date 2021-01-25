@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        class Ninja {
+
+            constructor(nombre, salud, velocidad = 3, fuerza = 3) {
+                    // acá recibo los atributos
+                    this.nombre = nombre;
+                    this.salud = salud;
+                    this.velocidad = velocidad;
+                    this.fuerza = fuerza;
+                }
+                // acá escribo los métodos
+            sayName() {
+                console.log(this.nombre);
+            }
+
+            showStats() {
+
+                console.log(`nombre: ${this.nombre}
+                salud: ${this.salud}
+                velocidad: ${this.velocidad}
+                fuerza: ${this.fuerza}`);
+            }
+
+            drinkSake() {
+                this.salud += 10;
+                console.log(`salud + 10: ${this.salud}`);
+            }
+        }
+        // crear nuevas instancias o nuevas entradas
+        const susa = new Ninja("Susanowa", 100, 25, 10);
+        const miya = new Ninja("Miyamoto Musashi", 80);
+        const hanzo = new Ninja("Hattori Hanzo", 150, 30, 50);
+    </script>
+</body>
+
+</html>
